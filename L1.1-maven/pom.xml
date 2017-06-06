@@ -85,7 +85,7 @@
                 </executions>
                 <configuration>
                     <options>
-                        <option>-keep public class * { public class *; }</option>
+                        <option>-keep public class * { *; }</option>
                     </options>
                     <libs>
                         <lib>${java.home}/lib/rt.jar</lib>
