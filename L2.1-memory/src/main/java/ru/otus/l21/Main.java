@@ -28,8 +28,8 @@ public class Main {
         long memStart = (runtime.totalMemory() - runtime.freeMemory())/size;
 
         for (int i = 0; i < size; i++) {
-            array[i] = new Object();
-            //array[i] = new String(""); //String pool
+            //array[i] = new Object();
+            array[i] = new String(""); //String pool
             //array[i] = new String(new char[0]); //without String pool
             //array[i] = new MyClass();
         }
@@ -38,7 +38,6 @@ public class Main {
         System.out.println("Memory by one object: " + (memEnd-memStart));
         System.out.println("Created " + size + " objects.");
         Thread.sleep(1000); //wait for 1 sec
-        //}
     }
 
     private static class MyClass {
